@@ -1,0 +1,33 @@
+﻿@if (Data != null)
+{
+    <div class="card" style="width: 32rem;">
+        <div class="card-header bg-secondary text-bg-secondary">
+            <h5 class="card-title mb-0">Позиция по стабильности</h5>
+        </div>
+        <table class="table table-striped table-hover table-bordered mb-0">
+            <thead>
+                <tr class="">
+                    <th scope="col">#</th>
+                    <th scope="col">Очки</th>
+                    <th scope="col">Пилот</th>
+                    <th scope="col">Время 1</th>
+                    <th scope="col">Время 2</th>
+                    <th scope="col">Время 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Data)
+                {
+                    <tr>
+                        <td>@item.Position</td>
+                        <td>@item.DeltaTimePoints</td>
+                        <td>@item.AthleteName</td>
+                        <td class=".text-end">@item.MinTime1</td>
+                        <td class=".text-end">@item.MinTime2</td>
+                        <td class=".text-end">@item.MinTime3</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
