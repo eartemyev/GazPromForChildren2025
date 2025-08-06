@@ -4,7 +4,7 @@ namespace GazPromForChildren2025WebApp;
 
 public static class DbConnectionFactory
 {
-    private const string ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GazPromForChildren2025;Integrated Security=True;Connect Timeout=60;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+    private const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Data\\GazPromForChildren2025.mdf;Integrated Security=True;Connect Timeout=30";
 
     public static async Task<DbConnection> OpenConnectionAsync()
     {
