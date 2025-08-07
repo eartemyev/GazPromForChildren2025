@@ -1,6 +1,6 @@
 namespace GazPromForChildren2025WebApp.Pages;
 
-public class IndexModel() : PageModel
+public class RacesModel : PageModel
 {
     public void OnGet()
     {

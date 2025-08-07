@@ -16,7 +16,7 @@ ORDER BY [RaceNumber], [CarNumber], [Time]
   select --t.*,
      t.RaceNumber, t.CarNumber, t.AthleteId , t.AthleteName,
      t.Time1, t.Time2, t.Time3, t.TimeDelta,
-     t.DeltaTimePosition, t.BestTimePosition, (t.BestTimePosition + t.DeltaTimePosition) [TotalPosition],
+     t.DeltaTimePosition, t.BestTimePosition, 0 /*(t.BestTimePosition + t.DeltaTimePosition)*/ [TotalPosition],
 
      [dbo].[CalcPointByPosition](t.DeltaTimePosition) DeltaTimePoints, 
      [dbo].[CalcPointByPosition](t.BestTimePosition) BestTimePoints,

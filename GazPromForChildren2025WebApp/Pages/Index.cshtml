@@ -4,10 +4,9 @@
     ViewData["Title"] = "Итоги";
 }
 
-<h1> Газпром детям 2025</h1>
-<h2 class="text-secondary"> Группа 14-16 лет</h2>
-<br/>
+<h1> Газпром детям 2025 <span class="text-secondary" >Группа 14-16 лет</span></h1>
 
+<h3>@ViewData["Title"]</h3>
 <component type="typeof(Summary.PositionTotal.Component)" render-mode="ServerPrerendered" />
 <br/>
 
@@ -16,32 +15,3 @@
 
 <component type="typeof(Summary.PositionByBestDelta.Component)" render-mode="ServerPrerendered" />
 <br />
-
-@* @if (Model?.Data?.RaceAthletes != null)
-{
-    @for (var i = 1; i <= 6; i++)
-    {
-        <div class="card" style="width: 16rem;">
-            <div class="card-header bg-primary text-white">
-                <h5 class="card-title mb-0">Заезд @i</h5>
-            </div>
-            <table class="table table-striped table-hover table-bordered">
-                <thead>
-                <tr>
-                    <th scope="col">Имя</th>
-                    <th scope="col">Карт</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var item in Model.Data.RaceAthletes.Where(e => e.RaceNumber == i).OrderBy(e => e.AthleteName))
-                {
-                    <tr>
-                        <td>@item.AthleteName</td>
-                        <td>@item.CarNumber</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-    }
-    </div>
-} *@

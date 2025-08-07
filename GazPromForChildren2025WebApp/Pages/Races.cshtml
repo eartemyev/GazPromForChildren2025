@@ -1,0 +1,13 @@
+﻿@page
+@model RacesModel
+@{
+    ViewData["Title"] = "Заезды";
+}
+
+<h1>Газпром детям 2025</h1>
+<h2 class="text-secondary">Группа 14-16 лет</h2>
+<h3>@ViewData["Title"]</h3>
+<br/>
+
+<component type="typeof(Components.Races.Component)" render-mode="ServerPrerendered" />
+<br/>
